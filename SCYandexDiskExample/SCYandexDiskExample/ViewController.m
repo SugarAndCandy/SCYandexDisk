@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import <SCYandexDisk/SCAuthViewController.h>
+#import <SCYandexDisk/SCYandexDisk.h>
+#import "SCFilesListViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <SCYandexDiskAuthDelegate>
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -17,12 +19,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+}
+
+#pragma mark - SCYandexDiskAuthDelegate
+
+- (NSString *)clientID {
+    return @"625a5c86d5d64823b68b6720c83c5610";
+}
+
+- (NSString *)redirectURL {
+    return @"https://oauth.yandex.ru/verification_code?status=ok&ncrnd=9879";
+}
+
+- (void)OAuthLoginSucceededWithToken:(SCAccessToken *)token {
+    //NSLog(@"%@",token.tokenString);
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)OAuthLoginFailedWithError:(NSError *)error {
+    NSLog(@"%@",error);
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+#pragma mark - Actions
+
+- (IBAction)login:(id)sender {
+    SCYandexDiskAuthViewController *vc = [[SCYandexDiskAuthViewController alloc]initWithDelegate:self];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (IBAction)loadData:(id)sender {
+    SCFilesListViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SCFilesListViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

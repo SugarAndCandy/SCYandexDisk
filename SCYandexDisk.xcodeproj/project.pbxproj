@@ -7,24 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		944F0A171D36ADFE0092F246 /* SCYandexDiskService+Disk.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A151D36ADFE0092F246 /* SCYandexDiskService+Disk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A181D36ADFE0092F246 /* SCYandexDiskService+Disk.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F0A161D36ADFE0092F246 /* SCYandexDiskService+Disk.m */; };
+		944F0A1B1D36AE060092F246 /* SCYandexDiskService+Files.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A191D36AE060092F246 /* SCYandexDiskService+Files.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A1C1D36AE060092F246 /* SCYandexDiskService+Files.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F0A1A1D36AE060092F246 /* SCYandexDiskService+Files.m */; };
+		944F0A2F1D36B1890092F246 /* SCYandexDiskDisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A2D1D36B1890092F246 /* SCYandexDiskDisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A301D36B1890092F246 /* SCYandexDiskDisk.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F0A2E1D36B1890092F246 /* SCYandexDiskDisk.m */; };
+		944F0A3D1D36D01A0092F246 /* SCYandexDiskResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A3C1D36D01A0092F246 /* SCYandexDiskResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A401D36D8060092F246 /* SCYandexDiskPagination.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A3E1D36D8060092F246 /* SCYandexDiskPagination.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A411D36D8060092F246 /* SCYandexDiskPagination.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F0A3F1D36D8060092F246 /* SCYandexDiskPagination.m */; };
+		944F0A4B1D36E0880092F246 /* SCYandexDiskFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A491D36E0880092F246 /* SCYandexDiskFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A4C1D36E0880092F246 /* SCYandexDiskFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F0A4A1D36E0880092F246 /* SCYandexDiskFile.m */; };
+		944F0A4F1D36E08F0092F246 /* SCYandexDiskFolder.h in Headers */ = {isa = PBXBuildFile; fileRef = 944F0A4D1D36E08F0092F246 /* SCYandexDiskFolder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		944F0A501D36E08F0092F246 /* SCYandexDiskFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F0A4E1D36E08F0092F246 /* SCYandexDiskFolder.m */; };
 		94E74C021D368F6500E62EEC /* SCYandexDisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C011D368F6500E62EEC /* SCYandexDisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94E74C141D368FD700E62EEC /* SCAuthDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C101D368FD700E62EEC /* SCAuthDelegate.h */; };
-		94E74C151D368FD700E62EEC /* SCAuthProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C111D368FD700E62EEC /* SCAuthProtocol.h */; };
-		94E74C161D368FD700E62EEC /* SCAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C121D368FD700E62EEC /* SCAuthViewController.h */; };
-		94E74C171D368FD700E62EEC /* SCAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E74C131D368FD700E62EEC /* SCAuthViewController.m */; };
-		94E74C211D369AD900E62EEC /* SCConstantValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E74C201D369AD900E62EEC /* SCConstantValues.m */; };
+		94E74C141D368FD700E62EEC /* SCYandexDiskAuthDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C101D368FD700E62EEC /* SCYandexDiskAuthDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E74C151D368FD700E62EEC /* SCYandexDiskAuthProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C111D368FD700E62EEC /* SCYandexDiskAuthProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E74C161D368FD700E62EEC /* SCYandexDiskAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C121D368FD700E62EEC /* SCYandexDiskAuthViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E74C171D368FD700E62EEC /* SCYandexDiskAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E74C131D368FD700E62EEC /* SCYandexDiskAuthViewController.m */; };
+		94E74C211D369AD900E62EEC /* SCYandexDiskConstantValues.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E74C201D369AD900E62EEC /* SCYandexDiskConstantValues.m */; };
+		94E74C431D36A16800E62EEC /* SCYandexDiskService.h in Headers */ = {isa = PBXBuildFile; fileRef = 94E74C411D36A16800E62EEC /* SCYandexDiskService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E74C441D36A16800E62EEC /* SCYandexDiskService.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E74C421D36A16800E62EEC /* SCYandexDiskService.m */; };
+		AD0529C1E1F80B825633EF10 /* libPods-SCYandexDisk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A7B6DBB212668CFFF7CA17 /* libPods-SCYandexDisk.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03A7B6DBB212668CFFF7CA17 /* libPods-SCYandexDisk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SCYandexDisk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AEBB065F1285ECF9FF5C8EB /* Pods-SCYandexDisk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCYandexDisk.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCYandexDisk/Pods-SCYandexDisk.release.xcconfig"; sourceTree = "<group>"; };
+		944F0A151D36ADFE0092F246 /* SCYandexDiskService+Disk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCYandexDiskService+Disk.h"; sourceTree = "<group>"; };
+		944F0A161D36ADFE0092F246 /* SCYandexDiskService+Disk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCYandexDiskService+Disk.m"; sourceTree = "<group>"; };
+		944F0A191D36AE060092F246 /* SCYandexDiskService+Files.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCYandexDiskService+Files.h"; sourceTree = "<group>"; };
+		944F0A1A1D36AE060092F246 /* SCYandexDiskService+Files.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCYandexDiskService+Files.m"; sourceTree = "<group>"; };
+		944F0A2D1D36B1890092F246 /* SCYandexDiskDisk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskDisk.h; sourceTree = "<group>"; };
+		944F0A2E1D36B1890092F246 /* SCYandexDiskDisk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskDisk.m; sourceTree = "<group>"; };
+		944F0A3C1D36D01A0092F246 /* SCYandexDiskResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskResource.h; sourceTree = "<group>"; };
+		944F0A3E1D36D8060092F246 /* SCYandexDiskPagination.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskPagination.h; sourceTree = "<group>"; };
+		944F0A3F1D36D8060092F246 /* SCYandexDiskPagination.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskPagination.m; sourceTree = "<group>"; };
+		944F0A491D36E0880092F246 /* SCYandexDiskFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskFile.h; sourceTree = "<group>"; };
+		944F0A4A1D36E0880092F246 /* SCYandexDiskFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskFile.m; sourceTree = "<group>"; };
+		944F0A4D1D36E08F0092F246 /* SCYandexDiskFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskFolder.h; sourceTree = "<group>"; };
+		944F0A4E1D36E08F0092F246 /* SCYandexDiskFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskFolder.m; sourceTree = "<group>"; };
 		94E74BFE1D368F6500E62EEC /* SCYandexDisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SCYandexDisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E74C011D368F6500E62EEC /* SCYandexDisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCYandexDisk.h; sourceTree = "<group>"; };
 		94E74C031D368F6500E62EEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94E74C101D368FD700E62EEC /* SCAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAuthDelegate.h; sourceTree = "<group>"; };
-		94E74C111D368FD700E62EEC /* SCAuthProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAuthProtocol.h; sourceTree = "<group>"; };
-		94E74C121D368FD700E62EEC /* SCAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAuthViewController.h; sourceTree = "<group>"; };
-		94E74C131D368FD700E62EEC /* SCAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAuthViewController.m; sourceTree = "<group>"; };
-		94E74C1D1D3691B100E62EEC /* SCConstantValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCConstantValues.h; sourceTree = "<group>"; };
-		94E74C201D369AD900E62EEC /* SCConstantValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCConstantValues.m; sourceTree = "<group>"; };
+		94E74C101D368FD700E62EEC /* SCYandexDiskAuthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskAuthDelegate.h; sourceTree = "<group>"; };
+		94E74C111D368FD700E62EEC /* SCYandexDiskAuthProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskAuthProtocol.h; sourceTree = "<group>"; };
+		94E74C121D368FD700E62EEC /* SCYandexDiskAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskAuthViewController.h; sourceTree = "<group>"; };
+		94E74C131D368FD700E62EEC /* SCYandexDiskAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskAuthViewController.m; sourceTree = "<group>"; };
+		94E74C1D1D3691B100E62EEC /* SCYandexDiskConstantValues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskConstantValues.h; sourceTree = "<group>"; };
+		94E74C201D369AD900E62EEC /* SCYandexDiskConstantValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskConstantValues.m; sourceTree = "<group>"; };
+		94E74C411D36A16800E62EEC /* SCYandexDiskService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCYandexDiskService.h; sourceTree = "<group>"; };
+		94E74C421D36A16800E62EEC /* SCYandexDiskService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCYandexDiskService.m; sourceTree = "<group>"; };
+		A2D5D83049522656882D9005 /* Pods-SCYandexDisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCYandexDisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SCYandexDisk/Pods-SCYandexDisk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,17 +66,96 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD0529C1E1F80B825633EF10 /* libPods-SCYandexDisk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		944F0A141D36ADD40092F246 /* Subservice */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A151D36ADFE0092F246 /* SCYandexDiskService+Disk.h */,
+				944F0A161D36ADFE0092F246 /* SCYandexDiskService+Disk.m */,
+				944F0A191D36AE060092F246 /* SCYandexDiskService+Files.h */,
+				944F0A1A1D36AE060092F246 /* SCYandexDiskService+Files.m */,
+			);
+			path = Subservice;
+			sourceTree = "<group>";
+		};
+		944F0A1D1D36AEC20092F246 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A2C1D36B0F10092F246 /* Disk */,
+				944F0A231D36AFBB0092F246 /* File */,
+				944F0A221D36AFB40092F246 /* Folder */,
+				944F0A421D36D80A0092F246 /* Pagination */,
+				944F0A3C1D36D01A0092F246 /* SCYandexDiskResource.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		944F0A221D36AFB40092F246 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A4D1D36E08F0092F246 /* SCYandexDiskFolder.h */,
+				944F0A4E1D36E08F0092F246 /* SCYandexDiskFolder.m */,
+			);
+			path = Folder;
+			sourceTree = "<group>";
+		};
+		944F0A231D36AFBB0092F246 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A491D36E0880092F246 /* SCYandexDiskFile.h */,
+				944F0A4A1D36E0880092F246 /* SCYandexDiskFile.m */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		944F0A2C1D36B0F10092F246 /* Disk */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A2D1D36B1890092F246 /* SCYandexDiskDisk.h */,
+				944F0A2E1D36B1890092F246 /* SCYandexDiskDisk.m */,
+			);
+			path = Disk;
+			sourceTree = "<group>";
+		};
+		944F0A421D36D80A0092F246 /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A3E1D36D8060092F246 /* SCYandexDiskPagination.h */,
+				944F0A3F1D36D8060092F246 /* SCYandexDiskPagination.m */,
+			);
+			path = Pagination;
+			sourceTree = "<group>";
+		};
+		944F0A431D36DB7D0092F246 /* Values */ = {
+			isa = PBXGroup;
+			children = (
+				94E74C1D1D3691B100E62EEC /* SCYandexDiskConstantValues.h */,
+				94E74C201D369AD900E62EEC /* SCYandexDiskConstantValues.m */,
+			);
+			path = Values;
+			sourceTree = "<group>";
+		};
+		944F0A441D36DB8B0092F246 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				94E74C031D368F6500E62EEC /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		94E74BF41D368F6500E62EEC = {
 			isa = PBXGroup;
 			children = (
-				94E74C001D368F6500E62EEC /* SCYandexDisk */,
+				E40EBE9B9B584389F70C867B /* Frameworks */,
+				BF012262E852158E582709A1 /* Pods */,
 				94E74BFF1D368F6500E62EEC /* Products */,
+				94E74C001D368F6500E62EEC /* SCYandexDisk */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +170,12 @@
 		94E74C001D368F6500E62EEC /* SCYandexDisk */ = {
 			isa = PBXGroup;
 			children = (
-				94E74C1D1D3691B100E62EEC /* SCConstantValues.h */,
-				94E74C201D369AD900E62EEC /* SCConstantValues.m */,
+				944F0A1D1D36AEC20092F246 /* Models */,
 				94E74C181D368FE400E62EEC /* OAuth2 */,
+				94E74C401D36A13600E62EEC /* Service */,
+				944F0A441D36DB8B0092F246 /* Support */,
+				944F0A431D36DB7D0092F246 /* Values */,
 				94E74C011D368F6500E62EEC /* SCYandexDisk.h */,
-				94E74C031D368F6500E62EEC /* Info.plist */,
 			);
 			path = SCYandexDisk;
 			sourceTree = "<group>";
@@ -69,12 +183,39 @@
 		94E74C181D368FE400E62EEC /* OAuth2 */ = {
 			isa = PBXGroup;
 			children = (
-				94E74C101D368FD700E62EEC /* SCAuthDelegate.h */,
-				94E74C111D368FD700E62EEC /* SCAuthProtocol.h */,
-				94E74C121D368FD700E62EEC /* SCAuthViewController.h */,
-				94E74C131D368FD700E62EEC /* SCAuthViewController.m */,
+				94E74C101D368FD700E62EEC /* SCYandexDiskAuthDelegate.h */,
+				94E74C111D368FD700E62EEC /* SCYandexDiskAuthProtocol.h */,
+				94E74C121D368FD700E62EEC /* SCYandexDiskAuthViewController.h */,
+				94E74C131D368FD700E62EEC /* SCYandexDiskAuthViewController.m */,
 			);
-			name = OAuth2;
+			path = OAuth2;
+			sourceTree = "<group>";
+		};
+		94E74C401D36A13600E62EEC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				944F0A141D36ADD40092F246 /* Subservice */,
+				94E74C411D36A16800E62EEC /* SCYandexDiskService.h */,
+				94E74C421D36A16800E62EEC /* SCYandexDiskService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BF012262E852158E582709A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2D5D83049522656882D9005 /* Pods-SCYandexDisk.debug.xcconfig */,
+				1AEBB065F1285ECF9FF5C8EB /* Pods-SCYandexDisk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E40EBE9B9B584389F70C867B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03A7B6DBB212668CFFF7CA17 /* libPods-SCYandexDisk.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,10 +225,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E74C161D368FD700E62EEC /* SCAuthViewController.h in Headers */,
-				94E74C141D368FD700E62EEC /* SCAuthDelegate.h in Headers */,
+				94E74C161D368FD700E62EEC /* SCYandexDiskAuthViewController.h in Headers */,
+				944F0A401D36D8060092F246 /* SCYandexDiskPagination.h in Headers */,
+				944F0A1B1D36AE060092F246 /* SCYandexDiskService+Files.h in Headers */,
+				944F0A2F1D36B1890092F246 /* SCYandexDiskDisk.h in Headers */,
+				944F0A3D1D36D01A0092F246 /* SCYandexDiskResource.h in Headers */,
+				944F0A171D36ADFE0092F246 /* SCYandexDiskService+Disk.h in Headers */,
+				944F0A4B1D36E0880092F246 /* SCYandexDiskFile.h in Headers */,
+				944F0A4F1D36E08F0092F246 /* SCYandexDiskFolder.h in Headers */,
+				94E74C431D36A16800E62EEC /* SCYandexDiskService.h in Headers */,
+				94E74C141D368FD700E62EEC /* SCYandexDiskAuthDelegate.h in Headers */,
+				94E74C151D368FD700E62EEC /* SCYandexDiskAuthProtocol.h in Headers */,
 				94E74C021D368F6500E62EEC /* SCYandexDisk.h in Headers */,
-				94E74C151D368FD700E62EEC /* SCAuthProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,10 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94E74C061D368F6500E62EEC /* Build configuration list for PBXNativeTarget "SCYandexDisk" */;
 			buildPhases = (
+				E2E0376F91D00E17DE95D2C8 /* [CP] Check Pods Manifest.lock */,
 				94E74BF91D368F6500E62EEC /* Sources */,
 				94E74BFA1D368F6500E62EEC /* Frameworks */,
 				94E74BFB1D368F6500E62EEC /* Headers */,
 				94E74BFC1D368F6500E62EEC /* Resources */,
+				6E28A644FC0209B0A1B07119 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -153,13 +304,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E28A644FC0209B0A1B07119 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SCYandexDisk/Pods-SCYandexDisk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E0376F91D00E17DE95D2C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94E74BF91D368F6500E62EEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E74C171D368FD700E62EEC /* SCAuthViewController.m in Sources */,
-				94E74C211D369AD900E62EEC /* SCConstantValues.m in Sources */,
+				944F0A181D36ADFE0092F246 /* SCYandexDiskService+Disk.m in Sources */,
+				944F0A301D36B1890092F246 /* SCYandexDiskDisk.m in Sources */,
+				944F0A411D36D8060092F246 /* SCYandexDiskPagination.m in Sources */,
+				94E74C171D368FD700E62EEC /* SCYandexDiskAuthViewController.m in Sources */,
+				94E74C211D369AD900E62EEC /* SCYandexDiskConstantValues.m in Sources */,
+				944F0A501D36E08F0092F246 /* SCYandexDiskFolder.m in Sources */,
+				94E74C441D36A16800E62EEC /* SCYandexDiskService.m in Sources */,
+				944F0A1C1D36AE060092F246 /* SCYandexDiskService+Files.m in Sources */,
+				944F0A4C1D36E0880092F246 /* SCYandexDiskFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,12 +449,13 @@
 		};
 		94E74C071D368F6500E62EEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2D5D83049522656882D9005 /* Pods-SCYandexDisk.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SCYandexDisk/Info.plist;
+				INFOPLIST_FILE = SCYandexDisk/Support/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sugarandcandy.SCYandexDisk;
@@ -274,12 +466,13 @@
 		};
 		94E74C081D368F6500E62EEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AEBB065F1285ECF9FF5C8EB /* Pods-SCYandexDisk.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SCYandexDisk/Info.plist;
+				INFOPLIST_FILE = SCYandexDisk/Support/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sugarandcandy.SCYandexDisk;

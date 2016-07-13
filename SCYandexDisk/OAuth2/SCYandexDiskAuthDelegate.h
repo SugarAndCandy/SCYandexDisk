@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-
-@protocol SCAuthDelegate <NSObject>
+@class SCAccessToken;
+@protocol SCYandexDiskAuthDelegate<NSObject>
 
 /**
  @abstract The OAuth client ID of the delegate.
@@ -24,10 +24,12 @@
 - (NSString *)clientID;
 
 /**
- @abstract The redirect URL of the delegate which should be used during OAuth authorization.
+ @abstract The redirect URL of the delegate which should be used during OAuth
+ authorization.
 
  @discussion
- The delegate returns the redirect URL which was provided during registration of the application at:
+ The delegate returns the redirect URL which was provided during registration of
+ the application at:
  [Yandex OAuth app registration page]( https://oauth.yandex.ru/client/new )
 
  @return
@@ -39,12 +41,13 @@
  @abstract Callback for successful authentication
 
  @discussion
- This method is called on the delegate in the event of successful authentication.
- 
+ This method is called on the delegate in the event of successful
+ authentication.
+
  @param token
     The OAuth token recieved during authentication.
  */
-- (void)OAuthLoginSucceededWithToken:(NSString *)token;
+- (void)OAuthLoginSucceededWithToken:(SCAccessToken *)token;
 
 /**
  @abstract Callback for failed authentication

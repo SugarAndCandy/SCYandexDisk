@@ -1,0 +1,8 @@
+syntax: glob
+xcuserdata
+local.properties
+*.orig
+*/Pods/*
+Pods/*
+build/*
+*/build/*
