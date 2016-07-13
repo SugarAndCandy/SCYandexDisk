@@ -4,15 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SCYandexDisk.xcscheme</key>
+		<key>SCYandexDiskExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
+		</dict>
+		<key>Test.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>94E74BFD1D368F6500E62EEC</key>
+		<key>94E74BD91D368F1900E62EEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94E74C2C1D369F7C00E62EEC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

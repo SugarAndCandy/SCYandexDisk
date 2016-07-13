@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94E74BFD1D368F6500E62EEC"
-               BuildableName = "SCYandexDisk.framework"
-               BlueprintName = "SCYandexDisk"
-               ReferencedContainer = "container:SCYandexDisk.xcodeproj">
+               BlueprintIdentifier = "94E74C2C1D369F7C00E62EEC"
+               BuildableName = "Test.framework"
+               BlueprintName = "Test"
+               ReferencedContainer = "container:SCYandexDiskExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94E74BFD1D368F6500E62EEC"
-            BuildableName = "SCYandexDisk.framework"
-            BlueprintName = "SCYandexDisk"
-            ReferencedContainer = "container:SCYandexDisk.xcodeproj">
+            BlueprintIdentifier = "94E74C2C1D369F7C00E62EEC"
+            BuildableName = "Test.framework"
+            BlueprintName = "Test"
+            ReferencedContainer = "container:SCYandexDiskExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94E74BFD1D368F6500E62EEC"
-            BuildableName = "SCYandexDisk.framework"
-            BlueprintName = "SCYandexDisk"
-            ReferencedContainer = "container:SCYandexDisk.xcodeproj">
+            BlueprintIdentifier = "94E74C2C1D369F7C00E62EEC"
+            BuildableName = "Test.framework"
+            BlueprintName = "Test"
+            ReferencedContainer = "container:SCYandexDiskExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
