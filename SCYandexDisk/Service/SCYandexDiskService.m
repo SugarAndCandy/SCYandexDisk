@@ -9,15 +9,20 @@
 #import <AFNetworking/AFNetworking.h>
 #import <AFNetworking/UIKit+AFNetworking.h>
 #import <Reachability/Reachability.h>
-#import <SCAccessToken/SCAccessToken.h>
+#import "SCYandexDiskAccessToken.h"
 #import "SCYandexDiskConstantValues.h"
 #import "SCYandexDiskService.h"
 
 NSString *const kSCServiceMethodTypePOSTImage = @"image";
 
-const struct ServiceParameters ServiceParameters = {.identifier = @"identifier"};
+#define showNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
+#define hideNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
 
-const struct ErrorEntity ErrorEntity = {.status = @"status", .message = @"message", .errorCode = @"errorCode"};
+const struct YandexDiskErrorEntity YandexDiskErrorEntity = {
+    .status = @"status",
+    .message = @"message",
+    .errorCode = @"errorCode"
+};
 
 typedef NS_ENUM(NSUInteger, SCServiceMethodType) {
     SCServiceMethodTypeGET,
@@ -29,8 +34,10 @@ typedef NS_ENUM(NSUInteger, SCServiceMethodType) {
 static NSString *const DISK_BASE_URL = @"https://cloud-api.yandex.net/v1/";
 
 const struct HeaderKeys {
-    __unsafe_unretained NSString *accessTokenKey;
-} HeaderKeys = {.accessTokenKey = @"Authorization"};
+    __unsafe_unretained NSString *authorization;
+} HeaderKeys = {
+    .authorization = @"Authorization"
+};
 
 @interface SCYandexDiskService ()
 
@@ -42,17 +49,14 @@ const struct HeaderKeys {
 
 - (AFHTTPSessionManager *)sessionManager {
     if (!_sessionManager) {
-        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]
-                                         initWithBaseURL:[NSURL URLWithString:DISK_BASE_URL]];
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:DISK_BASE_URL]];
         [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
         manager.responseSerializer = [AFJSONResponseSerializer serializer];
         
-        AFJSONRequestSerializer *requestSerializer =
-        [AFJSONRequestSerializer serializer];
-        SCAccessToken *token = [SCAccessToken currentAccessToken];
+        AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+        SCYandexDiskAccessToken *token = [SCYandexDiskAccessToken currentAccessToken];
         if (token) {
-            [requestSerializer setValue:token.tokenString
-                     forHTTPHeaderField:HeaderKeys.accessTokenKey];
+            [requestSerializer setValue:token.tokenString forHTTPHeaderField:HeaderKeys.authorization];
             manager.requestSerializer = requestSerializer;
         }
         manager.requestSerializer = requestSerializer;
@@ -68,11 +72,11 @@ const struct HeaderKeys {
         service = [[SCYandexDiskService alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:service
                                                  selector:@selector(accessTokenDidRemovedNotification:)
-                                                     name:SCAccessTokenDidRemovedNotification
+                                                     name:SCYandexDiskAccessTokenDidRemovedNotification
                                                    object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:service
                                                  selector:@selector(accessTokenDidChangedNotification:)
-                                                     name:SCAccessTokenDidChangeNotification
+                                                     name:SCYandexDiskAccessTokenDidChangeNotification
                                                    object:nil];
     });
     return service;
@@ -92,14 +96,11 @@ const struct HeaderKeys {
 #pragma mark - Notification
 
 - (void)accessTokenDidRemovedNotification:(NSNotification *)notification {
-    [self.sessionManager.requestSerializer setValue:nil
-                                 forHTTPHeaderField:HeaderKeys.accessTokenKey];
+    [self.sessionManager.requestSerializer setValue:nil forHTTPHeaderField:HeaderKeys.authorization];
 }
 
 - (void)accessTokenDidChangedNotification:(NSNotification *)notification {
-    [self.sessionManager.requestSerializer
-     setValue:[SCAccessToken currentAccessToken].tokenString
-     forHTTPHeaderField:HeaderKeys.accessTokenKey];
+    [self.sessionManager.requestSerializer setValue:[SCYandexDiskAccessToken currentAccessToken].tokenString forHTTPHeaderField:HeaderKeys.authorization];
 }
 
 #pragma mark - Base Methods
@@ -287,9 +288,9 @@ withSessionDataTask:(NSURLSessionDataTask *)task
         if (!parsingError && dataDict) {
             error = [NSError
                      errorWithDomain:path
-                     code:[dataDict[ErrorEntity.errorCode] integerValue]
+                     code:[dataDict[YandexDiskErrorEntity.errorCode] integerValue]
                      userInfo:@{
-                                ErrorEntity.message : dataDict[ErrorEntity.message]
+                                YandexDiskErrorEntity.message : dataDict[YandexDiskErrorEntity.message]
                                 }];
         }
     }
@@ -306,9 +307,9 @@ withSessionDataTask:(NSURLSessionDataTask *)task
               previousPath:(NSString *)previousPath
         previousParameters:(NSDictionary *)previousParameters
                 completion:(yandexDiskCompletionHandler)completion {
+    NSLog(@"%@",error);
     if (error.code == oldTokenError().code) {
-#warning check token
-        //[self updateToken:^(SCAccessToken *result, NSError *error) {
+//TODO check token
         if (!error) {
             [self baseRequestWithType:previousType
                              fromPath:previousPath
@@ -317,7 +318,6 @@ withSessionDataTask:(NSURLSessionDataTask *)task
         } else {
             completion(NO, nil, error);
         }
-        //}];
     } else {
         completion(NO, nil, error);
     }

@@ -6,6 +6,5 @@
 target 'SCYandexDisk' do
 pod 'AFNetworking'
 pod 'Reachability'
-pod 'SCAccessToken'
 end
 

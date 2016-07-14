@@ -6,7 +6,7 @@
 //  Copyright © 2016 Sugar and Candy. All rights reserved.
 //
 
-#import <SCAccessToken/SCAccessToken.h>
+#import "SCYandexDiskAccessToken.h"
 #import "SCYandexDiskAuthViewController.h"
 #import "SCYandexDiskConstantValues.h"
 
@@ -57,9 +57,7 @@
 
 #pragma mark - UIWebViewDelegate methods
 
-- (BOOL)webView:(UIWebView *)webView
-shouldStartLoadWithRequest:(NSURLRequest *)request
- navigationType:(UIWebViewNavigationType)navigationType {
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *uri = request.URL.absoluteString;
     if ([uri hasPrefix:self.delegate.redirectURL]) { // did we get redirected to
         // the redirect url?
@@ -79,10 +77,9 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
             self.token = paraDict[@"access_token"];
             self.done = YES;
         } else if (paraDict[@"error"]) {
-            self.error =
-            [NSError errorWithDomain:kSCSessionAuthenticationErrorDomain
-                                code:kSCSessionErrorUnknown
-                            userInfo:paraDict];
+            self.error = [NSError errorWithDomain:kSCSessionAuthenticationErrorDomain
+                                             code:kSCSessionErrorUnknown
+                                         userInfo:paraDict];
             self.done = YES;
         }
         [self handleResult];
@@ -98,20 +95,14 @@ shouldStartLoadWithRequest:(NSURLRequest *)request
 }
 
 - (NSString *)authURI {
-    return [NSString stringWithFormat:@"https://oauth.yandex.ru/"
-            @"authorize?response_type=token&client_"
-            @"id=%@&display=popup",
-            self.delegate.clientID];
+    return [NSString stringWithFormat:@"https://oauth.yandex.ru/authorize?response_type=token&client_id=%@&display=popup", self.delegate.clientID];
 }
 
 - (void)handleResult {
     if (self.done && self.appeared) {
         if (self.token) {
-            SCAccessToken *token =
-            [[SCAccessToken alloc] initWithTokenString:self.token
-                                                userID:nil
-                                                  root:0];
-            [SCAccessToken setCurrentAccessToken:token];
+            SCYandexDiskAccessToken *token = [[SCYandexDiskAccessToken alloc] initWithTokenString:self.token];
+            [SCYandexDiskAccessToken setCurrentAccessToken:token];
             [self.delegate OAuthLoginSucceededWithToken:token];
             [[NSNotificationCenter defaultCenter]
              postNotificationName:kSCSessionDidAuthNotification

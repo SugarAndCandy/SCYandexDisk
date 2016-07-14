@@ -28,3 +28,5 @@ FOUNDATION_EXPORT const unsigned char SCYandexDiskVersionString[];
 #import <SCYandexDisk/SCYandexDiskFile.h>
 #import <SCYandexDisk/SCYandexDiskFolder.h>
 #import <SCYandexDisk/SCYandexDiskPagination.h>
+
+#import <SCYandexDisk/SCYandexDiskAccessToken.h>

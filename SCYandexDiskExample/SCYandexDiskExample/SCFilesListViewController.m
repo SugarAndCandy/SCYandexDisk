@@ -33,6 +33,10 @@
             NSLog(@"%@",error);
         }
     }];
+    
+    [[SCYandexDiskService sharedInstance]getDownloadLinkForPath:@"disk:/Dogovor.pdf" completion:^(BOOL success, NSURL *url, NSError *error) {
+        NSLog(@"%@",url);
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -49,7 +53,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     } else {
         SCYandexDiskFile *file = (SCYandexDiskFile *)resource;
-        cell.detailTextLabel.text = file.path;
+        cell.detailTextLabel.text = file.publicUrl;
 
     }
     cell.textLabel.text = resource.name;

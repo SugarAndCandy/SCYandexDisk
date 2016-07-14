@@ -8,19 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^yandexDiskCompletionHandler)(BOOL success,
-                                            id responseData,
-                                            NSError *error);
+typedef void (^yandexDiskCompletionHandler)(BOOL success, id responseData, NSError *error);
 
-extern const struct ServiceParameters {
-    __unsafe_unretained NSString *identifier;
-} ServiceParameters;
-
-extern const struct ErrorEntity {
+extern const struct YandexDiskErrorEntity {
     __unsafe_unretained NSString *status;
     __unsafe_unretained NSString *message;
     __unsafe_unretained NSString *errorCode;
-} ErrorEntity;
+} YandexDiskErrorEntity;
 
 /**
  Вызывать когда от сервера пришел идентичный lastUpdate нашему.
@@ -34,11 +28,10 @@ static inline NSError *equalValuesError(void) {
  Возвращает ошибку соединения с интернетом.
 */
 static inline NSError *connectionError(void) {
-    return
-        [NSError errorWithDomain:@"Connection"
+    return [NSError errorWithDomain:@"Connection"
                             code:NSURLErrorNotConnectedToInternet
                         userInfo:@{
-                            ErrorEntity.message :
+                            YandexDiskErrorEntity.message :
                                 @"Отсутствует соединение"
                         }];
 }
@@ -47,7 +40,7 @@ static inline NSError *connectionError(void) {
  Возвращает кастомную ошибку устаревшего токена.
 */
 static inline NSError *oldTokenError(void) {
-    return [NSError errorWithDomain:@"Old Token" code:401 userInfo:nil];
+    return [NSError errorWithDomain:@"Old Token" code:0 userInfo:nil];
 }
 
 @interface SCYandexDiskService : NSObject

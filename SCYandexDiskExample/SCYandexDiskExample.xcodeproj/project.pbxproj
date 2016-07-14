@@ -31,7 +31,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		944F0A371D36B9790092F246 /* libSCAccessToken.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSCAccessToken.a; path = "../../../../Library/Developer/Xcode/DerivedData/SCYandexDisk-balhxydquzzklhfzaeybqiivooff/Build/Products/Debug-iphonesimulator/SCAccessToken/libSCAccessToken.a"; sourceTree = "<group>"; };
 		944F0A381D36B9790092F246 /* SCYandexDisk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SCYandexDisk.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SCYandexDisk-balhxydquzzklhfzaeybqiivooff/Build/Products/Debug-iphonesimulator/SCYandexDisk.framework"; sourceTree = "<group>"; };
 		944F0A531D36F0C30092F246 /* SCFilesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCFilesListViewController.h; sourceTree = "<group>"; };
 		944F0A541D36F0C30092F246 /* SCFilesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCFilesListViewController.m; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 		944F0A3B1D36B97D0092F246 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				944F0A371D36B9790092F246 /* libSCAccessToken.a */,
 				944F0A381D36B9790092F246 /* SCYandexDisk.framework */,
 			);
 			name = Frameworks;

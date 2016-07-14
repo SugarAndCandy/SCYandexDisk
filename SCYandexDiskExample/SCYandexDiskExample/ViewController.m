@@ -37,7 +37,7 @@
     return @"https://oauth.yandex.ru/verification_code?status=ok&ncrnd=9879";
 }
 
-- (void)OAuthLoginSucceededWithToken:(SCAccessToken *)token {
+- (void)OAuthLoginSucceededWithToken:(SCYandexDiskAccessToken *)token {
     //NSLog(@"%@",token.tokenString);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -51,7 +51,7 @@
 #pragma mark - Actions
 
 - (IBAction)login:(id)sender {
-    SCYandexDiskAuthViewController *vc = [[SCYandexDiskAuthViewController alloc]initWithDelegate:self];
+    SCYandexDiskAuthViewController *vc = [[SCYandexDiskAuthViewController alloc] initWithDelegate:self];
     [self presentViewController:vc animated:YES completion:nil];
 }
 

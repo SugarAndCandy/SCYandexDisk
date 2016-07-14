@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class SCAccessToken;
+@class SCYandexDiskAccessToken;
 @protocol SCYandexDiskAuthDelegate<NSObject>
 
 /**
@@ -47,7 +47,7 @@
  @param token
     The OAuth token recieved during authentication.
  */
-- (void)OAuthLoginSucceededWithToken:(SCAccessToken *)token;
+- (void)OAuthLoginSucceededWithToken:(SCYandexDiskAccessToken *)token;
 
 /**
  @abstract Callback for failed authentication

@@ -1,8 +1,9 @@
 //
 //  SCYandexDiskFile.h
+//  SCYandexDisk
 //
-//  Created by maks kolesnik on 13.07.16
-//  Copyright (c) 2016 __MyCompanyName__. All rights reserved.
+//  Created by Maxim Kolesnik on 13.07.16.
+//  Copyright © 2016 Sugar and Candy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
