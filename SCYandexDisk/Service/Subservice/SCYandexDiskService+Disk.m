@@ -20,7 +20,7 @@
                           SCYandexDiskDisk *disk = [[SCYandexDiskDisk alloc] init];
                           disk.totalSpace = [[responseData objectForKey:@"total_space"] integerValue];
                           disk.trashSize = [[responseData objectForKey:@"trash_size"] integerValue];
-                          disk.usedSpace = [responseData objectForKey:@"used_space"] integerValue ;
+                          disk.usedSpace = [[responseData objectForKey:@"used_space"] integerValue];
                           completion(success, disk, error);
                       } else {
                           NSLog(@"%@", responseData);

@@ -13,8 +13,6 @@
 #import "SCYandexDiskConstantValues.h"
 #import "SCYandexDiskService.h"
 
-NSString *const kSCServiceMethodTypePOSTImage = @"image";
-
 #define showNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
 #define hideNetworkActivityIndicator() [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
 
@@ -33,9 +31,9 @@ typedef NS_ENUM(NSUInteger, SCServiceMethodType) {
 
 static NSString *const DISK_BASE_URL = @"https://cloud-api.yandex.net/v1/";
 
-const struct HeaderKeys {
+const struct YandexDiskHeaderKeys {
     __unsafe_unretained NSString *authorization;
-} HeaderKeys = {
+} YandexDiskHeaderKeys = {
     .authorization = @"Authorization"
 };
 
@@ -56,7 +54,7 @@ const struct HeaderKeys {
         AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
         SCYandexDiskAccessToken *token = [SCYandexDiskAccessToken currentAccessToken];
         if (token) {
-            [requestSerializer setValue:token.tokenString forHTTPHeaderField:HeaderKeys.authorization];
+            [requestSerializer setValue:token.tokenString forHTTPHeaderField:YandexDiskHeaderKeys.authorization];
             manager.requestSerializer = requestSerializer;
         }
         manager.requestSerializer = requestSerializer;
@@ -96,11 +94,11 @@ const struct HeaderKeys {
 #pragma mark - Notification
 
 - (void)accessTokenDidRemovedNotification:(NSNotification *)notification {
-    [self.sessionManager.requestSerializer setValue:nil forHTTPHeaderField:HeaderKeys.authorization];
+    [self.sessionManager.requestSerializer setValue:nil forHTTPHeaderField:YandexDiskHeaderKeys.authorization];
 }
 
 - (void)accessTokenDidChangedNotification:(NSNotification *)notification {
-    [self.sessionManager.requestSerializer setValue:[SCYandexDiskAccessToken currentAccessToken].tokenString forHTTPHeaderField:HeaderKeys.authorization];
+    [self.sessionManager.requestSerializer setValue:[SCYandexDiskAccessToken currentAccessToken].tokenString forHTTPHeaderField:YandexDiskHeaderKeys.authorization];
 }
 
 #pragma mark - Base Methods
