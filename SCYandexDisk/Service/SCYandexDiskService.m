@@ -154,7 +154,7 @@ const struct HeaderKeys {
     
     if (!self.connected) {
         hideNetworkActivityIndicator();
-        completion(NO, nil, connectionError());
+        completion(NO, nil, yandexDiskConnectionError());
         return;
     } else {
         switch (type) {
@@ -308,7 +308,7 @@ withSessionDataTask:(NSURLSessionDataTask *)task
         previousParameters:(NSDictionary *)previousParameters
                 completion:(yandexDiskCompletionHandler)completion {
     NSLog(@"%@",error);
-    if (error.code == oldTokenError().code) {
+    if (error.code == yandexDiskOldTokenError().code) {
 //TODO check token
         if (!error) {
             [self baseRequestWithType:previousType

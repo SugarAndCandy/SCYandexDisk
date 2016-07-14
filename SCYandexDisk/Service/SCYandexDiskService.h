@@ -20,14 +20,14 @@ extern const struct YandexDiskErrorEntity {
  Вызывать когда от сервера пришел идентичный lastUpdate нашему.
  Возвращать в блоке success вместе с success == YES.
 */
-static inline NSError *equalValuesError(void) {
+static inline NSError *yandexDiskEqualValuesError(void) {
     return [NSError errorWithDomain:@"Equal Values" code:304 userInfo:nil];
 }
 
 /**
  Возвращает ошибку соединения с интернетом.
 */
-static inline NSError *connectionError(void) {
+static inline NSError *yandexDiskConnectionError(void) {
     return [NSError errorWithDomain:@"Connection"
                             code:NSURLErrorNotConnectedToInternet
                         userInfo:@{
@@ -39,7 +39,7 @@ static inline NSError *connectionError(void) {
 /**
  Возвращает кастомную ошибку устаревшего токена.
 */
-static inline NSError *oldTokenError(void) {
+static inline NSError *yandexDiskOldTokenError(void) {
     return [NSError errorWithDomain:@"Old Token" code:0 userInfo:nil];
 }
 
