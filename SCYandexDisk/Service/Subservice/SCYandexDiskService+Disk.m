@@ -21,15 +21,13 @@
                           disk.totalSpace = [[responseData objectForKey:@"total_space"] integerValue];
                           disk.trashSize = [[responseData objectForKey:@"trash_size"] integerValue];
                           disk.usedSpace = [[responseData objectForKey:@"used_space"] integerValue];
-                          completion(success, disk, error);
+                          if (completion) {
+                              completion(success, disk, error);
+                          }
                       } else {
-                          NSLog(@"%@", responseData);
-                          NSLog(@"%@", error);
-                          NSLog(@"%@", error.localizedDescription);
-                          NSLog(@"%@", error.domain);
-                          NSLog(@"%ld", error.code);
-                          NSLog(@"%@", error.userInfo);
-                          completion(success, nil, error);
+                          if (completion) {
+                              completion(success, nil, error);
+                          }
                       }
                   }];
 }
