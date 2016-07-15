@@ -9,7 +9,7 @@
 #import "SCYandexDiskAccessToken.h"
 #import "SCYandexDiskKeychainStore.h"
 
-#define SC_ACCESSTOKEN_TOKENSTRING_KEY @"tokenString"
+#define SC_ACCESSTOKEN_TOKENSTRING_KEY @"SC_ACCESSTOKEN_TOKENSTRING_KEY"
 
 static SCYandexDiskAccessToken *_currentAccessToken;
 
